@@ -23,4 +23,33 @@ LarkMidTable 是一站式开源的数据中台，实现元数据管理，数据�
 
 # **快速开始**
 
-请点击   
+运行
+
+```
+npm install [ 慢的话用  npm install --registry https://registry.npm.taobao.org]
+```
+
+修改配置
+
+找到 `vue.config.js` 修改 `proxy` 里的属性即可
+
+```
+[process.env.VUE_APP_API]: {
+        target: `http://localhost:${apiPort}/api`,
+        changeOrigin: true,
+        pathRewrite: {
+          ['^' + process.env.VUE_APP_API]: ''
+        }
+```
+
+启动
+
+```
+ npm run dev
+```
+
+打包
+
+```
+npm run build:prod
+```
