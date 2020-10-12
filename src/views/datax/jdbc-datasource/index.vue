@@ -261,7 +261,7 @@ export default {
         this.temp.jdbcUrl = 'jdbc:postgresql://{host}:{port}/{database}'
         this.temp.jdbcDriverClass = 'org.postgresql.Driver'
       } else if (datasource === 'sqlserver') {
-        this.temp.jdbcUrl = 'jdbc:jtds:sqlserver://{host}:{port};DatabaseName={database}'
+        this.temp.jdbcUrl = 'jdbc:jtds:sqlserver://{host}:{port}/{database}'
         this.temp.jdbcDriverClass = 'net.sourceforge.jtds.jdbc.Driver'
       } else if (datasource === 'clickhouse') {
         this.temp.jdbcUrl = 'jdbc:clickhouse://{host}:{port}/{database}'
