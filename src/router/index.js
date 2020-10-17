@@ -146,7 +146,7 @@ export const asyncRoutes = [
       {
         path: 'metaManage',
         name: 'MetaManage',
-        component: () => import('@/views/datax/metaManage/index'),
+        // component: () => import('@/views/datax/metaManage/index'),
         meta: {title: '元数据管理', icon: 'cfg-datasouce'}
       }
     ]
@@ -161,7 +161,7 @@ export const asyncRoutes = [
       {
         path: 'dataQuality',
         name: 'DataQuality',
-        component: () => import('@/views/datax/dataQuality/index'),
+        // component: () => import('@/views/datax/dataQuality/index'),
         meta: {title: '数据质量检测', icon: 'cfg-datasouce'}
       }
     ]
