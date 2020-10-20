@@ -68,7 +68,7 @@
           >
             <el-table :data="registerNode">
               <el-table-column width="150" property="title" label="执行器名称" />
-              <el-table-column width="150" property="appName" label="appName" />
+              <el-table-column width="150" property="appName" label="分组标识" />
               <el-table-column width="150" property="registryList" label="机器地址" />
             </el-table>
             <el-button slot="reference" size="small">查看</el-button>
@@ -705,7 +705,7 @@
             },
             // 查看日志
             handlerViewLog(row) {
-                this.$router.push({ path: '/datax/log/jobLog', query: { jobId: row.id }})
+                this.$router.push({ path: '/data/log', query: { jobId: row.id }})
             },
             handlerStart(row) {
                 job.startJob(row.id).then(response => {

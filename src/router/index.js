@@ -141,13 +141,13 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/datax/metaManage',
     name: 'MetaManage',
-    meta: {title: '元数据管理', icon: 'work'},
+    meta: {title: '元数据管理', icon: 'tree-table'},
     children: [
       {
         path: 'metaManage',
         name: 'MetaManage',
-        // component: () => import('@/views/datax/metaManage/index'),
-        meta: {title: '元数据管理', icon: 'cfg-datasouce'}
+        component: () => import('@/views/datax/metaManage/index'),
+        meta: {title: '元数据管理', icon: 'tree-table'}
       }
     ]
   },
@@ -156,13 +156,73 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/datax/dataQuality',
     name: 'DataQuality',
-    meta: {title: '数据质量检测', icon: 'work'},
+    meta: {title: '数据质量检测', icon: 'component'},
     children: [
       {
         path: 'dataQuality',
         name: 'DataQuality',
-        // component: () => import('@/views/datax/dataQuality/index'),
-        meta: {title: '数据质量检测', icon: 'cfg-datasouce'}
+        component: () => import('@/views/datax/dataQuality/index'),
+        meta: {title: '数据质量检测', icon: 'component'}
+      }
+    ]
+  },
+  {
+    path: '/datax/dataBlood',
+    component: Layout,
+    redirect: '/datax/dataBlood',
+    name: 'DataBlood',
+    meta: {title: '数据血缘检测', icon: 'nested'},
+    children: [
+      {
+        path: 'dataBlood',
+        name: 'DataBlood',
+        component: () => import('@/views/datax/dataBlood/index'),
+        meta: {title: '数据血缘检测', icon: 'nested'}
+      }
+    ]
+  },
+  {
+    path: '/datax/dataJoin',
+    component: Layout,
+    redirect: '/datax/dataJoin',
+    name: 'dataJoin',
+    meta: {title: '数据碰撞', icon: 'tree'},
+    children: [
+      {
+        path: 'innerJoin',
+        name: 'InnerJoin',
+        component: () => import('@/views/datax/dataJoin/innerJoin/index'),
+        meta: {title: '交集', icon: 'table'}
+      },
+      {
+        path: 'diffSetJoin',
+        name: 'DiffSetJoin',
+        component: () => import('@/views/datax/dataJoin/diffSetJoin/index'),
+        meta: {title: '差集', icon: 'table'}
+      },
+      {
+        path: 'fullOuterJoin',
+        name: 'FullOuterJoin',
+        component: () => import('@/views/datax/dataJoin/fullOuterJoin/index'),
+        meta: {title: '并集', icon: 'table'}
+      },
+      {
+        path: 'leftJoin',
+        name: 'LeftJoin',
+        component: () => import('@/views/datax/dataJoin/leftJoin/index'),
+        meta: {title: '左连接', icon: 'table'}
+      },
+      {
+        path: 'rightJoin',
+        name: 'RightJoin',
+        component: () => import('@/views/datax/dataJoin/rightJoin/index'),
+        meta: {title: '右连接', icon: 'table'}
+      },
+      {
+        path: 'customizingSQL',
+        name: 'CustomizingSQL',
+        component: () => import('@/views/datax/dataJoin/customizingSQL/index'),
+        meta: {title: '自定义SQL', icon: 'table'}
       }
     ]
   },
@@ -171,7 +231,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/datax/DatabaseSync',
     name: 'DatabaseSync',
-    meta: {title: '数据库同步', icon: 'project'},
+    meta: {title: '数据库同步', icon: 'work'},
     children: [
       {
         path: 'jobProject',
@@ -202,8 +262,7 @@ export const asyncRoutes = [
         name: 'JobTemplate',
         component: () => import('@/views/datax/jobTemplate/index'),
         meta: {title: 'FlinkX任务模板', icon: 'task-tmp'}
-      }
-      ,
+      },
       {
         path: 'jdbcDatasource',
         name: 'JdbcDatasource',
@@ -229,13 +288,13 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/datax/user',
     name: 'user',
-    meta: {title: '用户管理', icon: 'work', roles: ['ROLE_ADMIN']},
+    meta: {title: '用户管理', icon: 'peoples', roles: ['ROLE_ADMIN']},
     children: [
       {
         path: 'user',
         name: 'User',
         component: () => import('@/views/datax/user/index'),
-        meta: {title: '用户管理', icon: 'table'}
+        meta: {title: '用户管理', icon: 'peoples'}
       }
     ]
   },
@@ -254,7 +313,34 @@ export const asyncRoutes = [
       }
     ]
   },
-  toolRouter,
+  {
+    path: '/datax/tools',
+    component: Layout,
+    redirect: '/datax/tools',
+    name: 'tools',
+    meta: {title: '工具', icon: 'example'},
+    children: [
+      {
+        path: 'jsonFormat',
+        name: 'JsonFormat',
+        component: () => import('@/views/tool/jsonFormat'),
+        meta: {title: 'json格式化', icon: 'json'}
+      },
+      {
+        path: 'textEdit',
+        name: 'TextEdit',
+        component: () => import('@/views/tool/textEdit'),
+        meta: {title: '富文本编辑器', icon: 'form'}
+      },
+      {
+        path: 'sqlEdit',
+        name: 'SQLEdit',
+        component: () => import('@/views/tool/sqlEdit'),
+        meta: {title: 'SQL编辑器', icon: 'edit'}
+      }
+    ]
+  },
+
   {path: '*', redirect: '/404', hidden: true}
 ]
 
