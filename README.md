@@ -56,3 +56,7 @@ npm install [ 慢的话用  npm install --registry https://registry.npm.taobao.o
 ```
 npm run build:prod
 ```
+
+# 技术交流
+
+**搜索微信号码[ RuoChengFlag ]加我微信我拉你到研发群，你也可以与其他伙伴交流大数据技术，如果觉得项目不错，可以star关注，LarkMidTable团队将十分感谢您的关注！**
