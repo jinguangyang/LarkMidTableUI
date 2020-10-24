@@ -240,28 +240,10 @@ export const asyncRoutes = [
         meta: {title: '项目管理', icon: 'project'}
       },
       {
-        path: '/datax/DatabaseSync/job/jobInfo',
-        name: 'JobInfo',
-        component: () => import('@/views/datax/jobInfo/index'),
-        meta: {title: '实例管理', icon: 'task-cfg'}
-      },
-      {
-        path: '/datax/DatabaseSync/job/jsonBuild',
-        name: 'JsonBuild',
-        component: () => import('@/views/datax/json-build/index'),
-        meta: {title: '任务构建', icon: 'guide', noCache: false}
-      },
-      {
-        path: '/datax/DatabaseSync/job/jsonBuildBatch',
-        name: 'JsonBuildBatch',
-        component: () => import('@/views/datax/json-build-batch/index'),
-        meta: {title: '任务批量构建', icon: 'batch-create', noCache: false}
-      },
-      {
-        path: '/datax/DatabaseSync/job/jobTemplate',
-        name: 'JobTemplate',
-        component: () => import('@/views/datax/jobTemplate/index'),
-        meta: {title: 'FlinkX任务模板', icon: 'task-tmp'}
+        path: 'executor',
+        name: 'Executor',
+        component: () => import('@/views/datax/executor/index'),
+        meta: {title: '执行器管理', icon: 'exe-cfg'}
       },
       {
         path: 'jdbcDatasource',
@@ -270,16 +252,34 @@ export const asyncRoutes = [
         meta: {title: '数据源管理', icon: 'cfg-datasouce'}
       },
       {
+        path: '/datax/DatabaseSync/job/jobTemplate',
+        name: 'JobTemplate',
+        component: () => import('@/views/datax/jobTemplate/index'),
+        meta: {title: 'FlinkX任务模板', icon: 'task-tmp'}
+      },
+      {
+        path: '/datax/DatabaseSync/job/jobInfo',
+        name: 'JobInfo',
+        component: () => import('@/views/datax/jobInfo/index'),
+        meta: {title: '实例管理', icon: 'task-cfg'}
+      },
+      {
+        path: '/datax/DatabaseSync/job/jsonBuildBatch',
+        name: 'JsonBuildBatch',
+        component: () => import('@/views/datax/json-build-batch/index'),
+        meta: {title: '任务批量构建', icon: 'batch-create', noCache: false}
+      },
+      {
+        path: '/datax/DatabaseSync/job/jsonBuild',
+        name: 'JsonBuild',
+        component: () => import('@/views/datax/json-build/index'),
+        meta: {title: '任务构建', icon: 'guide', noCache: false}
+      },
+      {
         path: 'jobLog',
         name: 'JobLog',
         component: () => import('@/views/datax/jobLog/index'),
         meta: {title: '日志管理', icon: 'log'}
-      },
-      {
-        path: 'executor',
-        name: 'Executor',
-        component: () => import('@/views/datax/executor/index'),
-        meta: {title: '执行器管理', icon: 'exe-cfg'}
       }
     ]
   },
