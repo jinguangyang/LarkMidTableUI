@@ -231,7 +231,7 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/datax/DatabaseSync',
     name: 'DatabaseSync',
-    meta: {title: '数据库同步', icon: 'work'},
+    meta: {title: '数据集成', icon: 'work'},
     children: [
       {
         path: 'jobProject',
