@@ -15,10 +15,10 @@
   </div>
 </template>
 <script>
-import RDBMSReader from './reader/RDBMSReader'
-import HiveReader from './reader/HiveReader'
-import HBaseReader from './reader/HBaseReader'
-import MongoDBReader from './reader/MongoDBReader'
+import RDBMSReader from '../json-build/reader/RDBMSReader'
+import HiveReader from '../json-build/reader/HiveReader'
+import HBaseReader from '../json-build/reader/HBaseReader'
+import MongoDBReader from '../json-build/reader/MongoDBReader'
 export default {
   name: 'Reader',
   components: { RDBMSReader, HiveReader, HBaseReader, MongoDBReader },
